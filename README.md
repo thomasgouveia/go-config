@@ -43,7 +43,8 @@ func main() {
 
 		// Enable automatic environment variables lookup
 		EnvEnabled: true,
-		EnvPrefix:  "app",
+		EnvPrefix:  "my_app",
+		// In this example, environment variables will be MY_APP_ADDR and MY_APP_PORT
 
 		Default: &Config{
 			Addr: "0.0.0.0",
@@ -55,7 +56,7 @@ func main() {
 	}
 
 	// Override settings from environment variables
-	os.Setenv("APP_PORT", "3000")
+	os.Setenv("MY_APP_PORT", "3000")
 
 	cfg, err := loader.Load()
 	if err != nil {
