@@ -24,7 +24,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/thomasgouveia/config"
+	"github.com/thomasgouveia/go-config"
 )
 
 type Config struct {
